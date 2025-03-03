@@ -182,7 +182,7 @@ export function Forma(props: {width: number}) {
                 </div>
                 {props.width < 480 && <div className="container-flex-souhlas souhlas-container">
                   <label className="lable-souhlas">
-                    Souhlasím se zásadami ochrany osobních údajů
+                  <u className="pointer"><a href="Prohlášeníoochraněosobníchúdajů2.docx">Souhlasím se zásadami ochrany osobních údajů</a></u>
                   </label>
                   <Field className="souhlas" name="souhlas" type="checkbox" />
                   <ErrorMessage
