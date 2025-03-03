@@ -32,11 +32,11 @@ export default function Home() {
       window.removeEventListener("resize", g);
     };
   }, []);
-  const q = typeof document !== "undefined" ? document.getElementsByClassName("AAAAAA")[0] : "";
+
   return (
     <div>
       <Background />
-        {formVisible && <div style={{position: "relative"}}><Forma width={width}></Forma>  <button className="form-close" onClick={() => {setFormVisible(!formVisible); q.classList.remove("hideee");}}><Image src="/close.png" alt="close" width={20} height={20}/></button></div>}
+        {formVisible && <div style={{position: "relative"}}><Forma width={width}></Forma>  <button className="form-close" onClick={() => {setFormVisible(!formVisible); typeof document !== "undefined" ? document.getElementsByClassName("AAAAAA")[0].classList.add("hideee") : "";;}}><Image src="/close.png" alt="close" width={20} height={20}/></button></div>}
       <main className="main-container" >
         <div>
           <section className="menu-section">
@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
               )}
 
-              <div onClick={() => {setFormVisible(!formVisible); q.classList.add("hideee");}}><ReserveButton /></div>
+              <div onClick={() => {setFormVisible(!formVisible); typeof document !== "undefined" ? document.getElementsByClassName("AAAAAA")[0].classList.add("hideee") : "";;}}><ReserveButton /></div>
               {width < 1024 && <Menu width={width} />}
             </div>
           </section>
@@ -124,7 +124,7 @@ export default function Home() {
             </p>{" "}
             <div className="line"></div>
           </div>
-          <div onClick={() => {setFormVisible(!formVisible); q.classList.add("hideee");}}><ReserveItem txt="Chceš Rezervovat drahu?" /></div> 
+          <div onClick={() => {setFormVisible(!formVisible);typeof document !== "undefined" ? document.getElementsByClassName("AAAAAA")[0].classList.add("hideee") : "";;}}><ReserveItem txt="Chceš Rezervovat drahu?" /></div> 
         </section>
         <section className="fiveth-main-container">
           <div className="images-container">
@@ -202,7 +202,7 @@ export default function Home() {
             <h3 id="left">Po-Pa - 12:00 - 23:00</h3>
             <h3 id="right">Sb-Ne - 9:00 - 4:00</h3>
           </div>
-          <div onClick={() => {setFormVisible(!formVisible); q.classList.add("hideee");}}><ReserveItem txt="Chceš užit čas u nas?" /></div> 
+          <div onClick={() => {setFormVisible(!formVisible); typeof document !== "undefined" ? document.getElementsByClassName("AAAAAA")[0].classList.add("hideee") : "";}}><ReserveItem txt="Chceš užit čas u nas?" /></div> 
         </section>
         <footer className="eighth-main-container">
           <div className="kontakt-adresa-container">
