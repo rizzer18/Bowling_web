@@ -48,7 +48,7 @@ export default function Home() {
     <div>
       <Background />
         <Suspense>
-        <SearchHandler setFormVisible={setFormVisible} />
+          <SearchHandler setFormVisible={setFormVisible} />
         </Suspense>
         {formVisible && <div style={{position: "relative"}}><Forma width={width}></Forma>  <button className="form-close" onClick={() => {setFormVisible(!formVisible); document.getElementsByClassName("AAAAAA")[0].classList.remove("hideee");}}><Image src="/close.png" alt="close" width={20} height={20}/></button></div>}
       <main className="main-container" >
