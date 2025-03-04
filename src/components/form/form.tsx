@@ -24,7 +24,7 @@ export function Forma(props: {width: number}) {
   async function sendMail(values:MailSend, setSubmitting: (isSubmitting: boolean) => void) {
    
   const response =  await axios
-      .post("http://localhost:3000/api/send", values, {
+      .post("/api/send", values, {
         headers: {
           "Content-Type": "appication/json",
         },
