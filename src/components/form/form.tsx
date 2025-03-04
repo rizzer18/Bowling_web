@@ -13,7 +13,6 @@ export function Forma(props: {width: number}) {
     fullname: string().required("Requred"),
     email: string().required("Requred").email("Neplatná emailova adresa"),
     telefon: string().required("Requred").matches(/^\+420\s?\d{3}\s?\d{3}\s?\d{3}$/, "Nesprávné zadání"),
-
     date: date()
       .required("Vyberte datum")
       .min(today, "Datum nesmí být v minulosti"),
@@ -143,7 +142,7 @@ export function Forma(props: {width: number}) {
                 </div>
                 {props.width >= 480 && <div className="container-flex-souhlas souhlas-container">
                   <label className="lable-souhlas">
-                   <u className="pointer"><Link href="/Ochrana_udeje">Souhlasím se zásadami ochrany osobních údajů</Link></u> 
+                   <u className="pointer"><Link href="/Ochrana_udeje" onClick={() => document.getElementsByClassName("AAAAAA")[0].classList.remove("hideee")}>Souhlasím se zásadami ochrany osobních údajů</Link></u> 
                   </label>
                   <Field className="souhlas" name="souhlas" type="checkbox" />
                   <ErrorMessage
@@ -183,7 +182,7 @@ export function Forma(props: {width: number}) {
                 </div>
                 {props.width < 480 && <div className="container-flex-souhlas souhlas-container">
                   <label className="lable-souhlas">
-                  <u className="pointer"><Link href="/Ochrana_udeje">Souhlasím se zásadami ochrany osobních údajů</Link></u>
+                  <u className="pointer"><Link href="/Ochrana_udeje" onClick={() => document.getElementsByClassName("AAAAAA")[0].classList.remove("hideee")}>Souhlasím se zásadami ochrany osobních údajů</Link></u>
                   </label>
                   <Field className="souhlas" name="souhlas" type="checkbox" />
                   <ErrorMessage

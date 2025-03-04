@@ -14,18 +14,22 @@ import { ReserveItem } from "@/components/reserve/reservationItem";
 import { DrowImages } from "@/components/drawImages/images";
 import { useEffect, useState } from "react";
 import { Forma } from "@/components/form/form";
+import { useSearchParams } from "next/navigation";
 
 export default function Home() {
   const [width, setWidth] = useState<number>(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
-  
+  const searchParams = useSearchParams(); 
   const [formVisible, setFormVisible] = useState<boolean>(false);
   useEffect(() => {
     const g = () => {
       setWidth(window.innerWidth);
     };
-   
+    if(searchParams.get("info") === "true") {
+      setFormVisible(true);
+      document.getElementsByClassName("AAAAAA")[0].classList.add("hideee");
+    }
     
     window.addEventListener("resize", g);
     return () => {
