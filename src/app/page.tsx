@@ -12,10 +12,9 @@ import { ReserveButton } from "@/components/reserve/reserveButton";
 import { Cards } from "@/components/cards/cards";
 import { ReserveItem } from "@/components/reserve/reservationItem";
 import { DrowImages } from "@/components/drawImages/images";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Forma } from "@/components/form/form";
 import { useSearchParams } from "next/navigation";
-
 export default function Home() {
   const [width, setWidth] = useState<number>(
     typeof window !== "undefined" ? window.innerWidth : 0
@@ -40,7 +39,9 @@ export default function Home() {
   return (
     <div>
       <Background />
+        <Suspense>
         {formVisible && <div style={{position: "relative"}}><Forma width={width}></Forma>  <button className="form-close" onClick={() => {setFormVisible(!formVisible); document.getElementsByClassName("AAAAAA")[0].classList.remove("hideee");}}><Image src="/close.png" alt="close" width={20} height={20}/></button></div>}
+        </Suspense>
       <main className="main-container" >
         <div>
           <section className="menu-section">
