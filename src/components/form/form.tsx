@@ -5,6 +5,7 @@ import SendIcon from "@mui/icons-material/Send";
 import "./form.css";
 import axios from "axios";
 import { MailSend } from "@/interfaces/mailSend";
+import Link from "next/link";
 export function Forma(props: {width: number}) {
   console.log(props.width)
   const today = new Date().toISOString().split("T")[0];
@@ -142,7 +143,7 @@ export function Forma(props: {width: number}) {
                 </div>
                 {props.width >= 480 && <div className="container-flex-souhlas souhlas-container">
                   <label className="lable-souhlas">
-                   <u className="pointer"><a href="Prohlášeníoochraněosobníchúdajů2.docx">Souhlasím se zásadami ochrany osobních údajů</a></u> 
+                   <u className="pointer"><Link href="/Ochrana_udeje">Souhlasím se zásadami ochrany osobních údajů</Link></u> 
                   </label>
                   <Field className="souhlas" name="souhlas" type="checkbox" />
                   <ErrorMessage
@@ -182,7 +183,7 @@ export function Forma(props: {width: number}) {
                 </div>
                 {props.width < 480 && <div className="container-flex-souhlas souhlas-container">
                   <label className="lable-souhlas">
-                  <u className="pointer"><a href="Prohlášeníoochraněosobníchúdajů2.docx">Souhlasím se zásadami ochrany osobních údajů</a></u>
+                  <u className="pointer"><Link href="/Ochrana_udeje">Souhlasím se zásadami ochrany osobních údajů</Link></u>
                   </label>
                   <Field className="souhlas" name="souhlas" type="checkbox" />
                   <ErrorMessage
