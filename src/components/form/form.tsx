@@ -25,23 +25,6 @@ export function Forma(props: { width: number }) {
       .typeError("Zadejte číslo") // Якщо введено не число
       .min(1, "Číslo nemůže být záporné"),
   });
-  useEffect(() => {
-    function SaveData(data: {
-      fullname: string;
-      email: string;
-      telefon: string;
-      tema: string;
-      date: string;
-      osob: number;
-      Poznamka: string;
-      souhlas: boolean;
-    }) {
-      const f = Object.keys(data) as (keyof typeof data)[];
-      f.forEach((element) => {
-        if (element) localStorage.setItem(`${element}`, `${data[element]}`);
-      });
-    }
-  }, [])
   function SaveData(data: {
     fullname: string;
     email: string;
