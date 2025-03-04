@@ -62,7 +62,7 @@ export default function Home() {
               height={120}
             ></Image>
             {width >= 1024 && <Menu width={width} />}
-            <div className="reservation-info-contaer">
+            <div className="reservation-info-container">
               {width > 1164 && (
                 <div className="info-container">
                   <p>Rezervační telefon:</p>
