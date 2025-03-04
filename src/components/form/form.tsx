@@ -7,7 +7,6 @@ import "./form.css";
 import axios from "axios";
 import { MailSend } from "@/interfaces/mailSend";
 import Link from "next/link";
-import { useEffect } from "react";
 export function Forma(props: { width: number }) {
   console.log(props.width);
   const today = new Date().toISOString().split("T")[0];
