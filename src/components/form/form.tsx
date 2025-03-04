@@ -1,3 +1,4 @@
+"use client"
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { object, string, date, boolean, number } from "yup";
 import Button from "@mui/material/Button";
@@ -6,13 +7,16 @@ import "./form.css";
 import axios from "axios";
 import { MailSend } from "@/interfaces/mailSend";
 import Link from "next/link";
-export function Forma(props: {width: number}) {
-  console.log(props.width)
+import { useEffect } from "react";
+export function Forma(props: { width: number }) {
+  console.log(props.width);
   const today = new Date().toISOString().split("T")[0];
   const validation = object().shape({
     fullname: string().required("Requred"),
     email: string().required("Requred").email("Neplatná emailova adresa"),
-    telefon: string().required("Requred").matches(/^\+420\s?\d{3}\s?\d{3}\s?\d{3}$/, "Nesprávné zadání"),
+    telefon: string()
+      .required("Requred")
+      .matches(/^\+420\s?\d{3}\s?\d{3}\s?\d{3}$/, "Nesprávné zadání"),
     date: date()
       .required("Vyberte datum")
       .min(today, "Datum nesmí být v minulosti"),
@@ -21,51 +25,83 @@ export function Forma(props: {width: number}) {
       .typeError("Zadejte číslo") // Якщо введено не число
       .min(1, "Číslo nemůže být záporné"),
   });
-  async function sendMail(values:MailSend, setSubmitting: (isSubmitting: boolean) => void) {
-   
-  const response =  await axios
-      .post("/api/send", values, {
-        headers: {
-          "Content-Type": "appication/json",
-        },
+  useEffect(() => {
+    function SaveData(data: {
+      fullname: string;
+      email: string;
+      telefon: string;
+      tema: string;
+      date: string;
+      osob: number;
+      Poznamka: string;
+      souhlas: boolean;
+    }) {
+      const f = Object.keys(data) as (keyof typeof data)[];
+      f.forEach((element) => {
+        if (element) localStorage.setItem(`${element}`, `${data[element]}`);
       });
+    }
+  }, [])
+  function SaveData(data: {
+    fullname: string;
+    email: string;
+    telefon: string;
+    tema: string;
+    date: string;
+    osob: number;
+    Poznamka: string;
+    souhlas: boolean;
+  }) {
+    const f = Object.keys(data) as (keyof typeof data)[];
+    f.forEach((element) => {
+      if (element) localStorage.setItem(`${element}`, `${data[element]}`);
+    });
+  }
+  async function sendMail(
+    values: MailSend,
+    setSubmitting: (isSubmitting: boolean) => void
+  ) {
+    const response = await axios.post("/api/send", values, {
+      headers: {
+        "Content-Type": "appication/json",
+      },
+    });
 
-      if(response.status === 200){
-         alert("Massage is send");
-      }
-      if(response.status === 400){
-        alert("something went wrong");
-      }
+    if (response.status === 200) {
+      alert("Massage is send");
+    }
+    if (response.status === 400) {
+      alert("something went wrong");
+    }
 
-      setSubmitting(false);
-    
+    setSubmitting(false);
   }
   return (
     <Formik
       initialValues={{
-        fullname: "",
-        email: "",
-        telefon: "+420 ",
-        tema: "Rezervace stolu",
-        date: "",
-        osob: 1,
-        Poznamka: "",
+        fullname: localStorage.getItem("fullname") || "",
+        email: localStorage.getItem("email") || "",
+        telefon: localStorage.getItem("telefon") || "+420 ",
+        tema: localStorage.getItem("tema") || "Rezervace stolu",
+        date:  localStorage.getItem("date") || "",
+        osob: parseInt(localStorage.getItem("osob") ?? '1') || 1,
+        Poznamka: localStorage.getItem("Poznamka") || "",
         souhlas: false,
       }}
       validationSchema={validation}
       onSubmit={(values, { setSubmitting }) => {
         sendMail(values, setSubmitting);
-       values.Poznamka = "";
-       values.date ="";
-       values.email = "";
-       values.fullname = "";
-       values.osob = 1;
-       values.souhlas = false;
-       values.telefon = "";
-       values.tema = "Rezervace stolu";
+        values.Poznamka = "";
+        values.date = "";
+        values.email = "";
+        values.fullname = "";
+        values.osob = 1;
+        values.souhlas = false;
+        values.telefon = "";
+        values.tema = "Rezervace stolu";
       }}
     >
-      {({ isSubmitting }) => (
+      {({ isSubmitting, values }) => (
         <Form className="form-for-rezervation">
           <div className="back" id="back">
             <h3>Rezervace</h3>
@@ -140,17 +176,33 @@ export function Forma(props: {width: number}) {
                     component="div"
                   />
                 </div>
-                {props.width >= 480 && <div className="container-flex-souhlas souhlas-container">
-                  <label className="lable-souhlas">
-                   <u className="pointer"><Link href="/Ochrana_udeje" onClick={() => document.getElementsByClassName("AAAAAA")[0].classList.remove("hideee")}>Souhlasím se zásadami ochrany osobních údajů</Link></u> 
-                  </label>
-                  <Field className="souhlas" name="souhlas" type="checkbox" />
-                  <ErrorMessage
-                    className="error-message err-souhl"
-                    name="souhlas"
-                    component="div"
-                  />
-                </div>}
+                {props.width >= 480 && (
+                  <div className="container-flex-souhlas souhlas-container">
+                    <label className="lable-souhlas">
+                      <u className="pointer"  
+                      onClick={() => {
+                          SaveData(values);
+                        }}>
+                        <Link
+                          href="/Ochrana_udeje"
+                          onClick={() => {
+                            document
+                              .getElementsByClassName("AAAAAA")[0]
+                              .classList.remove("hideee");
+                          }}
+                        >
+                          Souhlasím se zásadami ochrany osobních údajů
+                        </Link>
+                      </u>
+                    </label>
+                    <Field className="souhlas" name="souhlas" type="checkbox" />
+                    <ErrorMessage
+                      className="error-message err-souhl"
+                      name="souhlas"
+                      component="div"
+                    />
+                  </div>
+                )}
               </div>
               <div>
                 <div className="container-flex-lable date-container">
@@ -180,17 +232,35 @@ export function Forma(props: {width: number}) {
                     component="div"
                   />
                 </div>
-                {props.width < 480 && <div className="container-flex-souhlas souhlas-container">
-                  <label className="lable-souhlas">
-                  <u className="pointer"><Link href="/Ochrana_udeje" onClick={() => document.getElementsByClassName("AAAAAA")[0].classList.remove("hideee")}>Souhlasím se zásadami ochrany osobních údajů</Link></u>
-                  </label>
-                  <Field className="souhlas" name="souhlas" type="checkbox" />
-                  <ErrorMessage
-                    className="error-message err-souhl"
-                    name="souhlas"
-                    component="div"
-                  />
-                </div>}
+                {props.width < 480 && (
+                  <div className="container-flex-souhlas souhlas-container">
+                    <label className="lable-souhlas">
+                      <u
+                        className="pointer"
+                        onClick={() => {
+                          SaveData(values);
+                        }}
+                      >
+                        <Link
+                          href="/Ochrana_udeje"
+                          onClick={() => {
+                            document
+                              .getElementsByClassName("AAAAAA")[0]
+                              .classList.remove("hideee");
+                          }}
+                        >
+                          Souhlasím se zásadami ochrany osobních údajů
+                        </Link>
+                      </u>
+                    </label>
+                    <Field className="souhlas" name="souhlas" type="checkbox" />
+                    <ErrorMessage
+                      className="error-message err-souhl"
+                      name="souhlas"
+                      component="div"
+                    />
+                  </div>
+                )}
               </div>
             </div>
             <Button

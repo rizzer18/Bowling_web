@@ -14,16 +14,21 @@ import { ReserveItem } from "@/components/reserve/reservationItem";
 import { DrowImages } from "@/components/drawImages/images";
 import { Suspense, useEffect, useState } from "react";
 import { Forma } from "@/components/form/form";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation"; 
 function SearchHandler({ setFormVisible }: { setFormVisible: (val: boolean) => void }) {
+  const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   useEffect(() => {
     if (searchParams.get("info") === "true") {
       setFormVisible(true);
-      document.getElementsByClassName("AAAAAA")[0]?.classList.add("hideee");
+
+      const newParams = new URLSearchParams(searchParams);
+      newParams.set("info", "false");
+
+      router.replace(`?${newParams.toString()}`);
     }
-  }, [searchParams]);
+  }, [searchParams, setFormVisible, router]);
 
   return null;
 }
