@@ -3,7 +3,6 @@ import Image from "next/image";
 import "./images.css";
 import { useState } from "react";
 import { Slider } from "../slider/slider";
-import { Selection } from "../phone_selector/selector";
 const data: { path: string, index: number }[] = [
   {
     path: "/IMG-20250111-WA0017.jpeg",
@@ -52,7 +51,7 @@ const data: { path: string, index: number }[] = [
 ];
 export function DrowImages(){
     const [visible, setVisible] = useState<boolean>(false);
-    const [visiblePhone, setVisiblePhone] = useState<boolean>(false);
+    // const [visiblePhone, setVisiblePhone] = useState<boolean>(false);
     const [valueIndex, setValueIndex] = useState<number>(0);
     function Select(index: number){
      setVisible(!visible);
