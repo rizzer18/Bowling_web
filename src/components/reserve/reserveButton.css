@@ -14,11 +14,14 @@
 
 .button-text {
     font-size: 18px !important;
+    color: white;
 }
 
 @media (max-width: 480px) {
     .button-text {
         font-size: 16px !important;
+        color: white;
+        font-weight: 500;
     }
 
     .reserve-button {

@@ -165,7 +165,7 @@ width: 400px;
     .price-of-hour{
         position: relative;
         width: 65%;
-        height: 105px;
+        height: 115px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -303,7 +303,8 @@ margin-top: 135px;
   }
   .minimum-plat{
     position: absolute;
-    top: 75%;
+    font-size: 16px;
+    top: 68%;
     left: 40px;
     color: rgba(255, 255, 255, 0.627);
     font-size: 20px;
@@ -434,7 +435,8 @@ margin-top: 135px;
     }
     .minimum-plat{
       position: absolute;
-      top: 75%;
+      font-size: 16px;
+      top: 68%;
       left: 20px;
       color: rgba(255, 255, 255, 0.627);
     }
@@ -470,7 +472,7 @@ margin-top: 135px;
     .price-of-hour{
       position: relative;
       width: 95%;
-      height: 99px;
+      height: 104px;
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
@@ -668,7 +670,8 @@ margin-top: 135px;
     }
     .minimum-plat{
       position: absolute;
-      top: 75%;
+      font-size: 16px;
+      top: 68%;
       left: 20px;
       color: rgba(255, 255, 255, 0.627);
     }
@@ -749,7 +752,7 @@ margin-top: 135px;
   .price-of-hour{
     position: relative;
     width: 90%;
-    height: 99px;
+    height: 104px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -884,7 +887,7 @@ margin-top: 135px;
     .price-of-hour{
       position: relative;
       width: 90%;
-      height: 91px;
+      height: 104px;
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
