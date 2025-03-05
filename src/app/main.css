@@ -1,23 +1,23 @@
 ::-webkit-scrollbar {
-  width: 10px; /* Товщина вертикального скролбара */
-  height: 10px; /* Товщина горизонтального скролбара */
+  width: 10px;
+  height: 10px; 
 }
 
 /* Фон (трек) скролбара */
 ::-webkit-scrollbar-track {
-  background: #f0f0f000; /* Колір заднього фону */
+  background: #f0f0f000; 
   border-radius: 5px;
 }
 
-/* Сам повзунок (рухома частина) */
+
 ::-webkit-scrollbar-thumb {
-  background: #0b0046; /* Колір скролу */
+  background: #0b0046;
   border-radius: 5px;
 }
 
 /* При наведенні */
 ::-webkit-scrollbar-thumb:hover {
-  background: #840000ad; /* Темніший колір при наведенні */
+  background: #840000ad; 
 }
 .main-container{
     position: relative;

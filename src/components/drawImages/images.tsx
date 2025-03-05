@@ -3,6 +3,7 @@ import Image from "next/image";
 import "./images.css";
 import { useState } from "react";
 import { Slider } from "../slider/slider";
+import { Selection } from "../phone_selector/selector";
 const data: { path: string, index: number }[] = [
   {
     path: "/IMG-20250111-WA0017.jpeg",
@@ -51,6 +52,7 @@ const data: { path: string, index: number }[] = [
 ];
 export function DrowImages(){
     const [visible, setVisible] = useState<boolean>(false);
+    const [visiblePhone, setVisiblePhone] = useState<boolean>(false);
     const [valueIndex, setValueIndex] = useState<number>(0);
     function Select(index: number){
      setVisible(!visible);
@@ -61,8 +63,9 @@ export function DrowImages(){
      }
     return(
         <>
-         {visible && window.innerWidth >= 1024 && <Slider data={data} index={valueIndex} visible={visible} slider={SelectClose}/>}
-           {data.map((e, i) => <div key={e.path} onClick={() => Select(i)} className="fornt"><Image className="zoom-picture" src="/picture.png" alt="zoom-picture" width={60} height={60}/><Image className="building-image"  src={e.path} width={392} height={325} alt="building-image"/></div>)}
+          {visible && window.innerWidth >= 1024 ? <Slider data={data} index={valueIndex} visible={visible} slider={SelectClose}/> :  <div></div>}
+         
+           {data.map((e, i) => <div key={e.path} onClick={() => {if(window.innerWidth >= 1024)Select(i); if(window.innerWidth <= 1024) Select(i);}} className="fornt"><Image className="zoom-picture" src="/picture.png" alt="zoom-picture" width={60} height={60}/><Image className="building-image"  src={e.path} width={392} height={325} alt="building-image"/></div>)}
         </>
     );
 }

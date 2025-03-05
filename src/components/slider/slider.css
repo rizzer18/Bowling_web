@@ -34,8 +34,9 @@
 }
 .left-image-slider{
     position: absolute;
+    z-index: -2;
     top: 42%;
-    left: -746px;
+    left: 0px;
     transform: translate(-50%, -50%); 
     transition: all ease 1s;
     opacity: 0; 
@@ -52,7 +53,7 @@
 .right-image-slider{
     position: absolute;
     top: 42%;
-    left: 1946px;
+    left: 100%;
     transform: translate(-50%, -50%); 
     transition: all ease 1s;
     opacity: 0; 
