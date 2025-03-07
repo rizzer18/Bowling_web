@@ -25,6 +25,9 @@
 }
 
 @media (max-width: 480px) {
+    #tel{
+        font-size: 12px;
+    }
     .reservation-item {
         width: 95%;
         height: 150px;

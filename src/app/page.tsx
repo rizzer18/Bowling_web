@@ -112,7 +112,7 @@ export default function Home() {
             <Image src={img3} alt="show"></Image>
           </div>
           <div className="container-proch-my">
-            <h2 className="proch-my">Proč jsme</h2>
+            <h2 className="proch-my">Proč my?</h2>
             <ul className="proch-items">
               <li>
                 <Image src={img4} alt="calender" width={60} height={60}></Image>{" "}

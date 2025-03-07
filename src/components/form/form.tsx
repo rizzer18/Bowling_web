@@ -55,7 +55,7 @@ export function Forma(props: { width: number }) {
     if (response.status === 400) {
       alert("something went wrong");
     }
-
+    localStorage.clear();
     setSubmitting(false);
   }
   return (

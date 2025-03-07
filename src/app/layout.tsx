@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import {  Inter } from "next/font/google";
+import {  Inter, Work_Sans, Roboto_Slab, Big_Shoulders_Inline_Text, Merriweather } from "next/font/google";
 import "./globals.css";
-const InterFont = Inter({
-  variable: "--font-inter-sans",
+const RobotoSlabFont = Merriweather({
+  variable: "--font-merriweather",
   subsets: ["latin"],
+  weight: ["700"],
 });
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +19,7 @@ export default function RootLayout({
  
   return (
     <html lang="en">
-      <body className={`${InterFont.variable} AAAAAA`} >
+      <body className={`${RobotoSlabFont.variable} AAAAAA`} >
         {children}
       </body>
     </html>
