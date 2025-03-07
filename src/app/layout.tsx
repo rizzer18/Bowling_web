@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {  Inter, Work_Sans, Roboto_Slab, Big_Shoulders_Inline_Text, Merriweather } from "next/font/google";
+import { Merriweather } from "next/font/google";
 import "./globals.css";
 const RobotoSlabFont = Merriweather({
   variable: "--font-merriweather",
