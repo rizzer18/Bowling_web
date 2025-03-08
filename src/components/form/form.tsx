@@ -79,7 +79,7 @@ export function Forma(props: { width: number }) {
         values.fullname = "";
         values.osob = 1;
         values.souhlas = false;
-        values.telefon = "";
+        values.telefon = "+420 ";
         values.tema = "Rezervace stolu";
       }}
     >
