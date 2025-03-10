@@ -78,4 +78,5 @@
     top: 25px;
     border: none;
     cursor: pointer;
+    z-index: 1000;
 }
