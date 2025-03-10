@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     }
     await transport.sendMail({
       from: "romanroskanuk74@gmail.com",
-      to: "romanroshkanuk7@gmail.com",
+      to: "romanroskanuk74@gmail.com",
       subject: `${data.tema}`,
       text: "this is the test string",
       html: `<h1>${data.tema}</h1>

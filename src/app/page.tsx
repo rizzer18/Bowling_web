@@ -88,7 +88,7 @@ export default function Home() {
               )}
               {width < 500 && (
                 <div>
-                  Prostor pro vaše <span className="action">AKCE</span>
+                  Prostor pro vaše <span className="action smallll">AKCE</span>
                 </div>
               )}
               {width < 1024 ||

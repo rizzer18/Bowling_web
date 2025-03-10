@@ -24,6 +24,11 @@
     color: white;
    
 }
+.smallll{
+  color:rgb(0, 255, 234) !important;
+  font-weight: 900 !important;
+  font-size: 50px;
+}
 .hideee{
   
     overflow: hidden;
