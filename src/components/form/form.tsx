@@ -7,9 +7,11 @@ import "./form.css";
 import axios from "axios";
 import { MailSend } from "@/interfaces/mailSend";
 import Link from "next/link";
+import { Writable } from "stream";
 export function Forma(props: { width: number }) {
-  console.log(props.width);
   const today = new Date().toISOString().split("T")[0];
+
+
   const validation = object().shape({
     fullname: string().required("Requred"),
     email: string().required("Requred").email("Neplatná emailova adresa"),
@@ -24,6 +26,9 @@ export function Forma(props: { width: number }) {
       .typeError("Zadejte číslo") // Якщо введено не число
       .min(1, "Číslo nemůže být záporné"),
   });
+
+
+
   function SaveData(data: {
     fullname: string;
     email: string;
@@ -34,11 +39,18 @@ export function Forma(props: { width: number }) {
     Poznamka: string;
     souhlas: boolean;
   }) {
-    const f = Object.keys(data) as (keyof typeof data)[];
-    f.forEach((element) => {
-      if (element) localStorage.setItem(`${element}`, `${data[element]}`);
-    });
+    for (let element in data){
+      localStorage.setItem(`${element}`, `${data[element as keyof typeof data]}`);
+    }
+    // const f = Object.keys(data) as (keyof typeof data)[];
+    // f.forEach((element) => {
+     
+    // //  if(typeof data[element] === "string")  data[element] = "SSS" as never;
+    //   if (element) 
+    // });
   }
+
+
   async function sendMail(
     values: MailSend,
     setSubmitting: (isSubmitting: boolean) => void
@@ -49,15 +61,15 @@ export function Forma(props: { width: number }) {
       },
     });
 
-    if (response.status === 200) {
-      alert("Massage is send");
-    }
-    if (response.status === 400) {
-      alert("something went wrong");
-    }
+    if (response.status === 200) {alert("Massage is send");}
+
+    else if (response.status === 400) {alert("something went wrong");}
+    
     localStorage.clear();
     setSubmitting(false);
   }
+
+
   return (
     <Formik
       initialValues={{

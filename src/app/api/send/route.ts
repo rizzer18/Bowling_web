@@ -24,10 +24,12 @@ export async function POST(req: Request) {
       text: "this is the test string",
       html: `<h1>${data.tema}</h1>
       <p>${data.telefon}</p>
+      <p>${data.fullname}</p>
       <p>${data.email}</p>
       <p>${data.osob}</p>
       <p>${data.souhlas}</p>
-      <p>${data.date}</p>`,
+      <p>${data.date}</p>
+      <p>${data.Poznamka}</p>`,
     });
     return NextResponse.json({ message: "operation seccses!", status: 200 });
   } catch (error) {

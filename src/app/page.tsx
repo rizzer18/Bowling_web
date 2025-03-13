@@ -55,7 +55,7 @@ export default function Home() {
         <Suspense>
           <SearchHandler setFormVisible={setFormVisible} />
         </Suspense>
-        {formVisible && <div style={{position: "relative"}}><Forma width={width}></Forma>  <button className="form-close" onClick={() => {setFormVisible(!formVisible); document.getElementsByClassName("AAAAAA")[0].classList.remove("hideee");}}><Image src="/close.png" alt="close" width={20} height={20}/></button></div>}
+        {formVisible && <div style={{position: "relative"}}><Forma width={width}></Forma>  <button className="form-close" onClick={() => {setFormVisible(!formVisible); document.getElementsByClassName("AAAAAA")[0].classList.remove("hideee");  localStorage.clear();}}><Image src="/close.png" alt="close" width={20} height={20}/></button></div>}
       <main className="main-container" >
         <div>
           <section className="menu-section">
