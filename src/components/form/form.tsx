@@ -7,7 +7,6 @@ import "./form.css";
 import axios from "axios";
 import { MailSend } from "@/interfaces/mailSend";
 import Link from "next/link";
-import { Writable } from "stream";
 export function Forma(props: { width: number }) {
   const today = new Date().toISOString().split("T")[0];
 
@@ -39,15 +38,10 @@ export function Forma(props: { width: number }) {
     Poznamka: string;
     souhlas: boolean;
   }) {
-    for (let element in data){
-      localStorage.setItem(`${element}`, `${data[element as keyof typeof data]}`);
-    }
+     for (let element in data){
+       localStorage.setItem(`${element}`, `${data[element as keyof typeof data]}`);
+     }
     // const f = Object.keys(data) as (keyof typeof data)[];
-    // f.forEach((element) => {
-     
-    // //  if(typeof data[element] === "string")  data[element] = "SSS" as never;
-    //   if (element) 
-    // });
   }
 
 
