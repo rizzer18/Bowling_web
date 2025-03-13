@@ -38,7 +38,7 @@ export function Forma(props: { width: number }) {
     Poznamka: string;
     souhlas: boolean;
   }) {
-     for (let element in data){
+     for (const element in data){
        localStorage.setItem(`${element}`, `${data[element as keyof typeof data]}`);
      }
     // const f = Object.keys(data) as (keyof typeof data)[];
