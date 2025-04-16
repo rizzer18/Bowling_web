@@ -5,6 +5,9 @@ import { Menu } from "@/components/menu/menu";
 import Image from "next/image";
 import img from "../../public/golden-logo-template-free-png.webp";
 import img3 from "../../public/IMG-20250111-WA0032.jpeg";
+import img7 from "../../public/IMG-20250111-WA0020.jpeg";
+import img8 from "../../public/IMG-20250111-WA0030.jpeg";
+import img9 from "../../public/IMG-20250111-WA0019.jpeg";
 import img4 from "../../public/calendar.png";
 import img5 from "../../public/handshake.png";
 import img6 from "../../public/booking.png";
@@ -152,47 +155,42 @@ export default function Home() {
           </div>
         </section>
         <section className="sixth-main-container">
-          <h2>Různé další aktivity</h2>
+          <h2>Různé další zajímavosti</h2>
           <div className="information-container">
             <div className="container-of-horizontals">
               <div className="information-container-horizontal">
                 <Image
-                  src={img3}
+                  src={img9}
                   alt="picture"
                   width={360}
                   height={300}
                 ></Image>{" "}
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry`s
-                  standard dummy text ever since the 1500s,{" "}
+                V našich prostorných sálech jsou také velké stoly pro firemní akce, narozeniny a mnoho různých akcí, na které si vzpomenete, a je zde také prostor pro projektory.{" "}
                 </p>
               </div>
               <div className="information-container-horizontal">
                 <Image
-                  src={img3}
+                  src={img7}
                   alt="picture"
                   width={360}
                   height={300}
                 ></Image>{" "}
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry`s
-                  standard dummy text ever since the 1500s,{" "}
+                Pro vaše pohodlí a zábavu vašich dětí je k dispozici také dětský koutek, kde se vaše děti mohou zabavit.
+Dětský koutek je vybaven pestrou škálou hraček a stavebnic.{" "}
                 </p>
               </div>
               {width <= 1300 && (
                 <div className="information-container-horizontal">
                   <Image
-                    src={img3}
+                    src={img8}
                     alt="picture"
                     width={300}
                     height={300}
                   ></Image>{" "}
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry`s
-                    standard dummy text ever since the 1500s,{" "}
+                  Kromě bollingu pro vás máme také dva tenisové stoly, takže i když vás bolling omrzí, můžete si zahrát něco jiného.{" "}
                   </p>
                 </div>
               )}
@@ -200,16 +198,14 @@ export default function Home() {
             {width > 1300 && (
               <div className="information-container-vertical">
                 <Image
-                  src={img3}
+                  src={img8}
                   alt="picture"
                   width={390}
                   height={300}
                 ></Image>{" "}
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry`s
-                  standard dummy text ever since the 1500s, Lorem Ipsum has been
-                  the industry`s standard dummy text ever since the 1500s,{" "}
+                Kromě bowlingu pro vás máme také dva tenisové stoly, takže pokud vás bowling omrzí, můžete si zahrát něco jiného.
+                Ping-pong je skvělý způsob, jak se aktivně odreagovat, zasoutěžit si s přáteli nebo si jen tak zahrát pro radost. {" "}
                 </p>
               </div>
             )}
@@ -218,8 +214,8 @@ export default function Home() {
         <section className="seventh-main-container">
           <h2 id="oter">Otevírací doba</h2>
           <div className="pracovni-doba">
-            <h3 id="left">Po-Pa - 12:00 - 23:00</h3>
-            <h3 id="right">Sb-Ne - 9:00 - 4:00</h3>
+            <h3 id="left">Po-Čt - 15:00 - 21:00</h3>
+            <h3 id="right">Pá-Ne - 15:00 - 23:00</h3>
           </div>
           <div onClick={() => {setFormVisible(!formVisible); document.getElementsByClassName("AAAAAA")[0].classList.add("hideee");}}><ReserveItem txt="Chceš užit čas u nas?" /></div> 
         </section>
