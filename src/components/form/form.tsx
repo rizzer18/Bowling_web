@@ -55,7 +55,7 @@ export function Forma(props: { width: number }) {
       },
     });
 
-    if (response.status === 200) {alert("Massage is send");}
+    if (response.status === 200) {}
 
     else if (response.status === 400) {alert("something went wrong");}
     

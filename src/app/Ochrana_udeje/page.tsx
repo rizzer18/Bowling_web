@@ -9,12 +9,14 @@ export default function Ochrana_Udaj() {
         <h1 className="A1">Prohlášení o ochraně osobních údajů</h1>
 
         <h2 className="A2">I. Základní ustanovení</h2>
-        <p className="A3">1. Správcem osobních údajů podle článku 6 Nařízení Evropského parlamentu a Rady 2016/679 (GDPR) je <strong>[NÁZEV FIRMY]</strong>, IČ: <strong>[IČ]</strong>, se sídlem <strong>[ADRESA]</strong> (dále jen „správce“).</p>
+        <p className="A3">1. Správcem osobních údajů podle článku 6 Nařízení Evropského parlamentu a Rady 2016/679 (GDPR) je <strong>[TamaVik s.r.o.]</strong>, IČ: <strong>[21708835]</strong>, se sídlem <strong>[Chudenická 1059/30, Hostivař, 102 00 Praha]</strong> (dále jen „správce“).</p>
         <p className="A3">2. Kontaktní údaje správce:</p>
         <ul className="FF">
-            <li>Adresa: <strong>[ADRESA]</strong></li>
-            <li>E-mail: <strong>[E-MAIL]</strong></li>
-            <li>Telefon: <strong>[TELEFON]</strong></li>
+
+            <li>Jméno a příjmení: <strong>[Ihor Endzevych]</strong></li>
+            <li>Adresa: <strong>[Nádražní 486,517 21 Týniště nad Orlicí]</strong></li>
+            <li>E-mail: <strong>[endzevych@icloud.com]</strong></li>
+            <li>Telefon: <strong>[+420606779295]</strong></li>
         </ul>
 
         <h2 className="A2">II. Zpracovávané údaje a zdroj</h2>
