@@ -32,7 +32,7 @@ export async function POST(req: Request) {
     <li><strong>Погодження GDPR:</strong> ${data.souhlas}</li>
     <li><strong>Дата резервіції:</strong> ${data.date}</li>
     ${
-      data.Poznamka
+      data.Poznamka 
         ? `<li><strong>Примітка:</strong> ${data.Poznamka}</li>`
         : ""
     }
