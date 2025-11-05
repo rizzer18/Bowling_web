@@ -3,14 +3,14 @@ import { Background } from "@/components/background/background";
 import "./main.css";
 import { Menu } from "@/components/menu/menu";
 import Image from "next/image";
-import img from "../../public/golden-logo-template-free-png.webp";
+import img from "../../public/WhatsApp Image 2025-11-03 at 13.54.41_e76f893a.png";
 import img3 from "../../public/IMG-20250111-WA0032.jpeg";
 import img7 from "../../public/IMG-20250111-WA0020.jpeg";
 import img8 from "../../public/IMG-20250111-WA0030.jpeg";
 import img9 from "../../public/IMG-20250111-WA0019.jpeg";
 import img4 from "../../public/calendar.png";
 import img5 from "../../public/handshake.png";
-import img6 from "../../public/booking.png";
+import img6 from "../../public/schedule.png";
 import { ReserveButton } from "@/components/reserve/reserveButton";
 import { Cards } from "@/components/cards/cards";
 import { ReserveItem } from "@/components/reserve/reservationItem";
@@ -66,8 +66,8 @@ export default function Home() {
               className="logo"
               src={img}
               alt="Logo"
-              width={120}
-              height={120}
+              width={135}
+              height={130}
             ></Image>
             {width >= 1024 && <Menu width={width} />}
             <div className="reservation-info-container">
@@ -118,15 +118,15 @@ export default function Home() {
             <h2 className="proch-my">Proč my?</h2>
             <ul className="proch-items">
               <li>
-                <Image src={img4} alt="calender" width={60} height={60}></Image>{" "}
+                <Image src={img4} alt="calender" width={65} height={65}></Image>{" "}
                 <p>Jsme nový klub Bolling, který pro vás pracuje již rok.</p>
               </li>
               <li>
-                <Image src={img5} alt="calender" width={60} height={60}></Image>{" "}
+                <Image src={img5} alt="calender" width={65} height={65}></Image>{" "}
                 <p>Máme také více než tisíc spokojených zákazníků.</p>
               </li>
               <li>
-                <Image src={img6} alt="calender" width={60} height={60}></Image>{" "}
+                <Image src={img6} alt="calender" width={65} height={65}></Image>{" "}
                 <p>A máme něco pro vás, tak neváhejte a rezervujte u nas.</p>
               </li>
             </ul>
@@ -139,7 +139,7 @@ export default function Home() {
         <section className="fourth-main-container">
           <h2 className="cennik" id="cenni">Ceník bowlingu</h2>
           <div className="price-of-hour">
-            <h3>234 Kč</h3>
+            <h3>300 Kč</h3>
             <p>
               1 hodina{" "}
               <span className="minimum-plat">minimální platba 1 hodina</span>
@@ -155,7 +155,7 @@ export default function Home() {
           </div>
         </section>
         <section className="sixth-main-container">
-          <h2>Různé další zajímavosti</h2>
+          <h2>Další zajímavosti</h2>
           <div className="information-container">
             <div className="container-of-horizontals">
               <div className="information-container-horizontal">
@@ -178,7 +178,7 @@ export default function Home() {
                 ></Image>{" "}
                 <p>
                 Pro vaše pohodlí a zábavu vašich dětí je k dispozici také dětský koutek, kde se vaše děti mohou zabavit.
-Dětský koutek je vybaven pestrou škálou hraček a stavebnic.{" "}
+                  Dětský koutek je vybaven pestrou škálou hraček a stavebnic.{" "}
                 </p>
               </div>
               {width <= 1300 && (
@@ -217,7 +217,7 @@ Dětský koutek je vybaven pestrou škálou hraček a stavebnic.{" "}
             <h3 id="left">Po-Čt - 15:00 - 21:00</h3>
             <h3 id="right">Pá-Ne - 15:00 - 23:00</h3>
           </div>
-          <div onClick={() => {setFormVisible(!formVisible); document.getElementsByClassName("AAAAAA")[0].classList.add("hideee");}}><ReserveItem txt="Chceš užit čas u nas?" /></div> 
+          <div onClick={() => {setFormVisible(!formVisible); document.getElementsByClassName("AAAAAA")[0].classList.add("hideee");}}><ReserveItem txt="Chceš si u nás taký užít čas naplno?" /></div> 
         </section>
         <footer className="eighth-main-container">
           <div className="kontakt-adresa-container">
