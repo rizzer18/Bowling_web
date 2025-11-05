@@ -9,7 +9,7 @@ const RobotoSlabFont = Merriweather({
 export const metadata: Metadata = {
   title: "Bowlingový Club SV | Týniště nad Orlicí",
    icons: {
-    icon: "/WhatsApp Image 2025-11-03 at 13.54.41_1a26547b.jpg",
+    icon: "/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
   },
   description:
     "Bowlingový Club SV – bowlingový klub v Týništi nad Orlicí. Nabízíme možnost zahrát si bowling a ping-pong. Vždy vás rádi uvítáme a poskytneme vám odpovídající služby. Máme také možnost organizovat různé akce.",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Bowlingový Club SV",
     images: [
       {
-        url: "https://https://bowlingovyclubsv.cz/WhatsApp Image 2025-11-03 at 13.54.41_1a26547b.jpg",
+        url: "https://bowlingovyclubsv.cz/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
         width: 1200,
         height: 630,
         alt: "Bowlingový Club SV",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Bowlingový Club SV",
     description:
       "Bowlingový Club SV – bowlingový klub v Týništi nad Orlicí. Nabízíme možnost zahrát si bowling a ping-pong a organizovat různé akce.",
-    images: ["https://https://bowlingovyclubsv.cz/WhatsApp Image 2025-11-03 at 13.54.41_1a26547b.jpg"],
+    images: ["https://bowlingovyclubsv.cz/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg"],
     creator: "@RomanRoshkanyuk",
   },
 };
