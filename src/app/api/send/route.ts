@@ -14,6 +14,7 @@ export async function POST(req: Request) {
       !data.osob ||
       !data.telefon ||
       !data.tema
+      
     ) {
       return NextResponse.json({ message: "Bad reqest" }, { status: 400 });
     }
