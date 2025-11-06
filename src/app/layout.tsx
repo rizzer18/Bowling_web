@@ -38,12 +38,6 @@ export const metadata: Metadata = {
     url: "https://bowlingovyclubsv.cz",
     siteName: "Bowlingový Club SV",
     images: [
-     {
-       url: "https://bowlingovyclubsv.cz/5215587291475152473_120.jpg",
-       width: 600,
-       height: 600,
-       alt: "Bowlingový Club SV",
-     },
       {
        url: "https://bowlingovyclubsv.cz/ImmagesLogo.png",
        width: 1200,
@@ -80,20 +74,33 @@ export default function RootLayout({
   return (
     <html lang="cs">
        <head>
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Bowlingový Club SV",
-              "url": "https://bowlingovyclubsv.cz",
-              "logo": "https://bowlingovyclubsv.cz/ImmagesLogo.png",
-            }),
-          }}
-        />
+       <Script
+  id="organization-schema"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bowlingový Club SV",
+      "url": "https://bowlingovyclubsv.cz",
+      "logo": "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+      "image": "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+      "telephone": "+420607496833",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nádražní 486",
+        "addressLocality": "Týniště nad Orlicí",
+        "postalCode": "517 21",
+        "addressCountry": "CZ"
+      },
+      "sameAs": [
+        "https://www.facebook.com/people/Bowlingov%C3%BD-Club-SV/61552814855837/?locale=cs_CZ#",
+        "https://www.instagram.com/bowlingovyklub/"
+      ]
+    }),
+  }}
+/>
       </head>
       <body className={`${RobotoSlabFont.variable} AAAAAA`}>{children}</body>
     </html>
