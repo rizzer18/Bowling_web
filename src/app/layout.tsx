@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
-    shortcut: "/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
-    apple: "/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+    icon: "/5215587291475152473_120.jpg",
+    shortcut: "/5215587291475152473_120.jpg",
+    apple: "/5215587291475152473_120.jpg",
   },
   openGraph: {
     title: "Bowlingový Club SV",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
       "Bowlingový Club SV – bowlingový klub v Týništi nad Orlicí. Nabízíme možnost zahrát si bowling a ping-pong a organizovat různé akce.",
     images: [
        {
-       url: "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+       url: "https://bowlingovyclubsv.cz/5215587291475152473_120.jpg",
        width: 600,
        height: 600,
        alt: "Bowlingový Club SV",
