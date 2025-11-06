@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     "zábava",
     "akce",
     "SV",
-    "sv",
   ],
   authors: [{ name: "Roman Roshkanyuk", url: "https://bowlingovyclubsv.cz" }],
   creator: "Roman Roshkanyuk",
@@ -45,8 +44,8 @@ export const metadata: Metadata = {
        height: 630,
        alt: "Bowlingový Club SV",
      },
-         {
-       url: "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM-Copy.jpg",
+     {
+       url: "https://bowlingovyclubsv.cz/5215587291475152473_120.jpg",
        width: 600,
        height: 600,
        alt: "Bowlingový Club SV",
@@ -55,13 +54,19 @@ export const metadata: Metadata = {
     locale: "cs_CZ",
     type: "website",
   },
+  
   twitter: {
     card: "summary_large_image",
     title: "Bowlingový Club SV",
     description:
       "Bowlingový Club SV – bowlingový klub v Týništi nad Orlicí. Nabízíme možnost zahrát si bowling a ping-pong a organizovat různé akce.",
     images: [
-      "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+       {
+       url: "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+       width: 600,
+       height: 600,
+       alt: "Bowlingový Club SV",
+     },
     ],
     creator: "@RomanRoshkanyuk",
   },
