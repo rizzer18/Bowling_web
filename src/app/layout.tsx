@@ -47,6 +47,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Bowlingový Club SV",
       },
+        {
+      url: "https://bowlingovyclubsv.cz/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
+      width: 600,
+      height: 600,
+      alt: "Bowlingový Club SV",
+    },
     ],
     locale: "cs_CZ",
     type: "website",
