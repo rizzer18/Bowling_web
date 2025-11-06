@@ -84,8 +84,8 @@ export default function RootLayout({
       "@type": "LocalBusiness",
       "name": "Bowlingový Club SV",
       "url": "https://bowlingovyclubsv.cz",
-      "logo": "https://bowlingovyclubsv.cz/logo.png",
-      "image": "https://bowlingovyclubsv.cz/logo.png",
+      "logo": "https://bowlingovyclubsv.cz/5215587291475152473_120.jpg",
+      "image": "https://bowlingovyclubsv.cz/5215587291475152473_120.jpg",
       "telephone": "+420607496833",
       "address": {
         "@type": "PostalAddress",
