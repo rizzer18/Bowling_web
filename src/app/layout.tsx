@@ -8,7 +8,7 @@ const RobotoSlabFont = Merriweather({
   weight: ["700"],
 });
 export const metadata: Metadata = {
-   title: "Bowlingový Club SV | Týniště nad Orlicí",
+  title: "Bowlingový Club SV | Týniště nad Orlicí",
   description:
     "Bowlingový Club SV – bowlingový klub v Týništi nad Orlicí. Nabízíme možnost zahrát si bowling a ping-pong. Vždy vás rádi uvítáme a poskytneme vám odpovídající služby. Máme také možnost organizovat různé akce.",
   keywords: [
@@ -21,9 +21,7 @@ export const metadata: Metadata = {
     "SV",
     "sv",
   ],
-  authors: [
-    { name: "Roman Roshkanyuk", url: "https://bowlingovyclubsv.cz" },
-  ],
+  authors: [{ name: "Roman Roshkanyuk", url: "https://bowlingovyclubsv.cz" }],
   creator: "Roman Roshkanyuk",
   robots: {
     index: true,
@@ -41,18 +39,18 @@ export const metadata: Metadata = {
     url: "https://bowlingovyclubsv.cz",
     siteName: "Bowlingový Club SV",
     images: [
-      {
-        url: "https://bowlingovyclubsv.cz/ImmagesLogo.png",
-        width: 1200,
-        height: 630,
-        alt: "Bowlingový Club SV",
-      },
-    //     {
-    //   url: "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM-Copy.jpg",
-    //   width: 600,
-    //   height: 600,
-    //   alt: "Bowlingový Club SV",
-    // },
+      // {
+      //   url: "https://bowlingovyclubsv.cz/ImmagesLogo.png",
+      //   width: 1200,
+      //   height: 630,
+      //   alt: "Bowlingový Club SV",
+      // },
+      //     {
+      //   url: "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM-Copy.jpg",
+      //   width: 600,
+      //   height: 600,
+      //   alt: "Bowlingový Club SV",
+      // },
     ],
     locale: "cs_CZ",
     type: "website",
