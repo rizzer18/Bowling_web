@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Bowlingový Club SV",
     images: [
       {
-        url: "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+        url: "https://bowlingovyclubsv.cz/ImmagesLogo.png",
         width: 1200,
         height: 630,
         alt: "Bowlingový Club SV",
