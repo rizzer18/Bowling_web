@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
-    shortcut: "/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
-    apple: "/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
+    icon: "/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+    shortcut: "/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
+    apple: "/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
   },
   openGraph: {
     title: "Bowlingový Club SV",
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     siteName: "Bowlingový Club SV",
     images: [
       {
-        url: "https://bowlingovyclubsv.cz/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
+        url: "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
         width: 1200,
         height: 630,
         alt: "Bowlingový Club SV",
       },
         {
-      url: "https://bowlingovyclubsv.cz/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
+      url: "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
       width: 600,
       height: 600,
       alt: "Bowlingový Club SV",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description:
       "Bowlingový Club SV – bowlingový klub v Týništi nad Orlicí. Nabízíme možnost zahrát si bowling a ping-pong a organizovat různé akce.",
     images: [
-      "https://bowlingovyclubsv.cz/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
+      "https://bowlingovyclubsv.cz/ChatGPT_Image_Nov_6,_2025,_10_58_28_AM.png",
     ],
     creator: "@RomanRoshkanyuk",
   },
@@ -87,7 +87,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Bowlingový Club SV",
               "url": "https://bowlingovyclubsv.cz",
-              "logo": "https://bowlingovyclubsv.cz/WhatsApp_Image_2025-11-03_at_13.54.41_1a26547b.jpg",
+              "logo": "https://bowlingovyclubsv.cz/ChatGPT_Image Nov_6,_2025, 10_58_28_AM.png",
             }),
           }}
         />
