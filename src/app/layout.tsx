@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     url: "https://bowlingovyclubsv.cz",
     siteName: "Bowlingový Club SV",
     images: [
-    //  {
-    //    url: "https://bowlingovyclubsv.cz/ImmagesLogo.png",
-    //    width: 1200,
-    //    height: 630,
-    //    alt: "Bowlingový Club SV",
-    //  },
+     {
+       url: "https://bowlingovyclubsv.cz/ImmagesLogo.png",
+       width: 1200,
+       height: 630,
+       alt: "Bowlingový Club SV",
+      },
      {
        url: "https://bowlingovyclubsv.cz/5215587291475152473_120.jpg",
        width: 600,
