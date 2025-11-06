@@ -90,7 +90,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Bowlingový Club SV",
               "url": "https://bowlingovyclubsv.cz",
-              "logo": "https://bowlingovyclubsv.cz/ChatGPT_Image Nov_6,_2025, 10_58_28_AM.png",
+              "logo": "https://bowlingovyclubsv.cz/ImmagesLogo.png",
             }),
           }}
         />
