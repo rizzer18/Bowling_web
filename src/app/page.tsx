@@ -3,7 +3,7 @@ import { Background } from "@/components/background/background";
 import "./main.css";
 import { Menu } from "@/components/menu/menu";
 import Image from "next/image";
-import img from "../../public/logo.png";
+import img from "../../public/favicon.ico";
 import img3 from "../../public/IMG-20250111-WA0032.jpeg";
 import img7 from "../../public/IMG-20250111-WA0020.jpeg";
 import img8 from "../../public/IMG-20250111-WA0030.jpeg";
