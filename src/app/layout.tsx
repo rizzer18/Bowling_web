@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   openGraph: {
     title: "Bowlingový Club SV",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Bowlingový Club SV",
     images: [
       {
-       url: "https://bowlingovyclubsv.cz/logo.png",
+       url: "https://bowlingovyclubsv.cz/favicon.ico",
        width: 600,
        height: 600,
        alt: "Bowlingový Club SV",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "Bowlingový Club SV – bowlingový klub v Týništi nad Orlicí. Nabízíme možnost zahrát si bowling a ping-pong a organizovat různé akce.",
     images: [
        {
-       url: "https://bowlingovyclubsv.cz/logo.png",
+       url: "https://bowlingovyclubsv.cz/favicon.ico",
        width: 600,
        height: 600,
        alt: "Bowlingový Club SV",
@@ -84,8 +84,8 @@ export default function RootLayout({
       "@type": "LocalBusiness",
       "name": "Bowlingový Club SV",
       "url": "https://bowlingovyclubsv.cz",
-      "logo": "https://bowlingovyclubsv.cz/logo.png",
-      "image": "https://bowlingovyclubsv.cz/logo.png",
+      "logo": "https://bowlingovyclubsv.cz/favicon.ico",
+      "image": "https://bowlingovyclubsv.cz/favicon.ico",
       "telephone": "+420607496833",
       "address": {
         "@type": "PostalAddress",
