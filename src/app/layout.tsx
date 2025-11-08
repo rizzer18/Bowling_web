@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "https://bowlingovyclubsv.cz/favicon.ico",
+    shortcut: "https://bowlingovyclubsv.cz/favicon.ico",
+    apple: "https://bowlingovyclubsv.cz/favicon.ico",
   },
   openGraph: {
     title: "Bowlingový Club SV",
@@ -60,6 +60,7 @@ export const metadata: Metadata = {
        width: 600,
        height: 600,
        alt: "Bowlingový Club SV",
+      
      },
     ],
     creator: "@RomanRoshkanyuk",
