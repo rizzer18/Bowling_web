@@ -75,6 +75,7 @@ export default function RootLayout({
   return (
     <html lang="cs">
        <head>
+         <link rel="manifest" href="/manifest.json" />
        <Script
   id="organization-schema"
   type="application/ld+json"
