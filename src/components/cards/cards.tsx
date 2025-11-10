@@ -3,7 +3,7 @@ import Image from "next/image";
 import "./cards.css";
 const data: Card[] = [
   {
-    text: "Máme 2 bollingové trasy pro maximálně 8 osob a nejlepší atmosféru.",
+    text: "Máme 2 bowlingové trasy pro maximálně 8 osob a nejlepší atmosféru.",
     path: "/bowling.png",
   },
   {
