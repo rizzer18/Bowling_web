@@ -119,7 +119,7 @@ export default function Home() {
             <ul className="proch-items">
               <li>
                 <Image src={img4} alt="calender" width={65} height={65}></Image>{" "}
-                <p>Jsme nový klub Bolling, který pro vás pracuje již rok.</p>
+                <p>Jsme nový klub Bowling, který pro vás pracuje již rok.</p>
               </li>
               <li>
                 <Image src={img5} alt="calender" width={65} height={65}></Image>{" "}
@@ -190,7 +190,7 @@ export default function Home() {
                     height={300}
                   ></Image>{" "}
                   <p>
-                  Kromě bollingu pro vás máme také dva tenisové stoly, takže i když vás bolling omrzí, můžete si zahrát něco jiného.{" "}
+                  Kromě bowlingu pro vás máme také dva tenisové stoly, takže i když vás bowling omrzí, můžete si zahrát něco jiného.{" "}
                   </p>
                 </div>
               )}
