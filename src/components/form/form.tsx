@@ -7,7 +7,6 @@ import "./form.css";
 import axios from "axios";
 import { MailSend } from "@/interfaces/mailSend";
 import Link from "next/link";
-import { kMaxLength } from "node:buffer";
 export function Forma(props: { width: number }) {
   const today = new Date().toISOString().split("T")[0];
 
