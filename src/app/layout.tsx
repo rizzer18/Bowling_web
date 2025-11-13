@@ -105,7 +105,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${RobotoSlabFont.variable} AAAAAA`}>{children}</body>
+      <body className={`${RobotoSlabFont.variable} AAAAAA`}>{children}A</body>
     </html>
   );
 }

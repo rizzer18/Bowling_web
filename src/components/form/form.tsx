@@ -7,6 +7,7 @@ import "./form.css";
 import axios from "axios";
 import { MailSend } from "@/interfaces/mailSend";
 import Link from "next/link";
+import { kMaxLength } from "node:buffer";
 export function Forma(props: { width: number }) {
   const today = new Date().toISOString().split("T")[0];
 
@@ -22,8 +23,10 @@ export function Forma(props: { width: number }) {
       .min(today, "Datum nesmí být v minulosti"),
     souhlas: boolean().oneOf([true], "Potvrďte svůj souhlas"),
     osob: number()
-      .typeError("Zadejte číslo") // Якщо введено не число
-      .min(1, "Číslo nemůže být záporné"),
+      .typeError("Zadejte číslo") 
+      .min(1, "Číslo nemůže být záporné")
+      .max(50, "to je ale moc lidi zadejte mensi pocet"),
+    Poznamka: string().max(1000),
   });
 
 
@@ -258,9 +261,9 @@ export function Forma(props: { width: number }) {
               color="primary"
               size="large"
               endIcon={<SendIcon />}
-              loading={isSubmitting} // Кнопка буде в режимі loading під час сабміту
+              loading={isSubmitting} 
               loadingPosition="end"
-              disabled={isSubmitting} // Вимикаємо кнопку, поки йде сабміт
+              disabled={isSubmitting} 
             >
               Odeslat
             </Button>

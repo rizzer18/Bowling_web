@@ -1,12 +1,12 @@
 :root {
   --background: linear-gradient( #000000 0%, rgba(20, 77, 77, 0.804) 40%, rgb(39, 39, 65) 60%, rgb(20, 27, 59) 100%);
-  --foreground: linear-gradient( #000000 0%, rgba(20, 77, 77, 0.804) 40%, rgb(39, 39, 65) 60%, rgb(20, 27, 59) 100%);
+  --foreground: linear-gradient( #ffffff 0%, rgba(20, 77, 77, 0.804) 40%, rgb(39, 39, 65) 60%, rgb(20, 27, 59) 100%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: linear-gradient( #000000 0%, rgba(20, 77, 77, 0.804) 40%, rgb(39, 39, 65) 60%, rgb(20, 27, 59) 100%);
-    --foreground: linear-gradient( #000000 0%, rgba(20, 77, 77, 0.804) 40%, rgb(39, 39, 65) 60%, rgb(20, 27, 59) 100%);
+    --foreground: linear-gradient( #ffffff 0%, rgba(20, 77, 77, 0.804) 40%, rgb(39, 39, 65) 60%, rgb(20, 27, 59) 100%);
   }
 }
 
