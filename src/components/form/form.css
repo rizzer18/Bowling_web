@@ -6,7 +6,7 @@
     top:0;
     z-index: 19;
     background-color: rgba(0, 0, 0, 0.715);
-    color: white;
+    color: white !important;
 
 }
 @keyframes fadeIn {
