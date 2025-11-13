@@ -90,7 +90,7 @@ export function Forma(props: { width: number }) {
       }}
     >
       {({ isSubmitting, values }) => (
-        <Form className="form-for-rezervation">
+        <Form className="form-for-rezervation ">
           <div className="back" id="back">
             <h3>Rezervace</h3>
             <p>Rezervace je platná pouze po telefonickém potvrzení</p>
