@@ -21,7 +21,8 @@ export function Forma(props: { width: number }) {
       .required("Vyberte datum")
       .min(today, "Datum nesmí být v minulosti"),
     souhlas: boolean().oneOf([true], "Potvrďte svůj souhlas"),
-    osob: number()
+    osob: 
+    number()
       .typeError("Zadejte číslo") 
       .min(1, "Číslo nemůže být záporné")
       .max(50, "to je ale moc lidi zadejte mensi pocet"),
