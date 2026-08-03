@@ -1,302 +1,177 @@
-.form-for-rezervation{
-    overflow: auto;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top:0;
-    z-index: 19;
-    background-color: rgba(0, 0, 0, 0.715);
-    color: white !important;
+.form-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(6, 9, 19, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: modalFadeIn 0.3s ease-out;
+}
 
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }
-@keyframes fadeIn {
-    from {
-        top:1000px;
-    }
-    to {
-        top: 50%;
-    }
-  }
-.back{
-    overflow-y: auto; /* Дозволяємо вертикальний скрол */
-    overflow-x: hidden; /* Приховуємо горизонтальний скрол */
-  
-    max-height: 80vh; /* Обмежуємо висоту, щоб з'являвся скрол */
-    max-width:  740px;
-    animation: fadeIn .5s ease-in-out;
-    position: fixed;
-    background-color: rgba(29, 34, 33, 0.99);
-    width: 740px;
-    height: 600px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 20;
-    border-radius: 20px;
+
+.form-modal-card {
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(18, 26, 47, 0.95);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 242, 254, 0.15);
+  position: relative;
 }
-.back::-webkit-scrollbar {
-    width: 4px; /* Товщина скролбара */
-  }
-  
-  .back::-webkit-scrollbar-track {
-    background: #f0f0f000; /* Колір заднього фону */
-    border-radius: 8px;
-  }
-  
-  .back::-webkit-scrollbar-thumb {
-    background: #88888879; /* Колір скролу */
-    border-radius: 8px;
-  }
-  
-  .back::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Колір при наведенні */
-  }
-  
-.back input{
-     background-color: transparent;
-     border: none;
-     border-bottom: 1.5px solid white;
-     border-radius: 1px;
-     padding: 4px;
-     margin-bottom: 20px;
-     font-size: 16px;
-}
-.back label{
-   font-weight: 600;
-   padding-bottom: 10px;
-}
-.container-flex-lable{
-    display: flex;
-    flex-direction: column;
-    width: 280px;
-    position: relative;
-}
-.container-flex-lable option{
- background-color: rgba(29, 34, 33, 0.99);
- color: white;
-}
-.container-flex-souhlas{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
-}
-.main-tema{
-    width: 86.5%;
-    margin: 0 auto !important;
-    margin-bottom: 40px !important;
-}
-.lable-tema{
-    font-size: 23px;
-}
-.tema{
-    background-color: transparent;
-    border: none;
-    border-bottom: 1.5px solid white;
-    width: 100%;
-    font-size: 18px;
-    color: white;
-    border-radius: 0;
-}
-.form-flex-container{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 68px;
-}
-.souhlas{
-    width: 15px;
-    height: 15px;
-}
-.souhlas-container{
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-.souhlas-container label{
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-}
-.souhlas-container input{
-  
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    border-radius: 0;
-}
-.Poznamka{
-    height: 94px;
-    resize: none;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1.5px solid white;
-    border-radius: 1px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-.form-for-rezervation h3{
-  font-size: 28px;
+
+.form-modal-header {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: white;
-}
-.form-for-rezervation p{
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.647);
-    margin-bottom: 20px;
-  }
-  .form-button{
-    background-color: rgba(41, 124, 132, 0.22) !important;
-    color:white !important;
-    border: none !important;
-    margin-left: 40px !important;
-    margin-top: 20px !important;
-    width: 150px !important;
-    border-radius: 15px !important;
-  }
-  .form-close{
-    position: fixed;
-    background-color: transparent;
-    right: 25px;
-    top: 25px;
-    border: none;
-    cursor: pointer;
-    z-index: 30;
-   }
-  .error-message{
-    position: absolute;
-    top:59px;
-    font-size: 14px;
-    color: red;
-  }
-  .err-souhl{
-    top:17px;
-    left: 0px;
-  }
-  @media (max-width: 480px) {
-    .date{
-     width: 205px;;
-     height: 30px;
-    }
-
-    .back{
-        animation: fadeIn .5s ease-in-out;
-        max-height: 80vh; /* Обмежуємо висоту, щоб з'являвся скрол */
-        max-width:  350px;
-        position: fixed;
-        background-color: rgba(29, 34, 33, 0.99);
-        width: 350px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 20;
-        border-radius: 20px;
-    }
-    .form-flex-container{
-        display: inline;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        margin-left: 30px;
-        transform: translateX(11px);
-    }
-    .form-flex-container div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .container-flex-lable{
-        display: flex;
-        justify-content: start !important;
-        align-items: start !important;
-        flex-direction: column;
-        width: 230px;
-        position: relative;
-        margin-left: 10px;
-    }
-    .main-tema{
-        width: 70%;
-        margin: 0 auto !important;
-        margin-bottom: 30px !important;
-    }
-    .souhlas-container{
-        display: flex;
-        flex-direction: row-reverse !important;
-        transform: translateX(10px);
-        gap: 10px;
-        width: 240px;
-    }
-    .form-button{
-        margin-bottom: 30px !important;
-        margin-top: 20px !important;
-        margin-left: 60px !important;
-
-    }
-    .err-souhl{
-        top:29px;
-        left: 0px;
-      }
-      .Poznamka{
-        width: 215px;
-      }
+  margin-bottom: 30px;
 }
 
-@media (min-width: 481px) and (max-width: 768px){
-    .err-souhl{
-        top:29px;
-        left: 0px;
-      }
-    .back{
-        animation: fadeIn .5s ease-in-out;
-        position: fixed;
-        background-color: rgba(29, 34, 33, 0.99);
-        max-width:  650px;
-
-        width: 500px;
-        height: 650px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 20;
-        border-radius: 20px;
-    }
-    .form-flex-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        margin-left: 30px;
-        transform: translateX(11px);
-    }
-    .form-flex-container div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .container-flex-lable{
-        display: flex;
-        justify-content: start !important;
-        align-items: start !important;
-        flex-direction: column;
-        width: 230px;
-        position: relative;
-        margin-left: 10px;
-    }
-    .main-tema{
-        width: 70%;
-        margin: 0 auto !important;
-        margin-bottom: 30px !important;
-    }
-    .souhlas-container{
-        display: flex;
-        flex-direction: row-reverse !important;
-        transform: translateX(10px);
-        gap: 10px;
-    }
+.form-modal-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
+
+.form-modal-subtitle {
+  font-size: 15px;
+  color: var(--primary-cyan);
+  font-weight: 500;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-modal-card {
+    padding: 24px;
+  }
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.form-field-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--primary-cyan);
+  background: rgba(0, 242, 254, 0.08);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+}
+
+.form-select option {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.form-textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.form-checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary-cyan);
+  cursor: pointer;
+}
+
+.form-checkbox-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.form-checkbox-label a {
+  color: var(--primary-cyan);
+  text-decoration: underline;
+}
+
+.form-error {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 2px;
+}
+
+.form-submit-wrapper {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--text-muted);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.form-close-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #ffffff;
+}

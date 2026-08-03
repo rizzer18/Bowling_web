@@ -1,58 +1,68 @@
-.background{
-    height: 970px;
-    width: 1700px;
-    z-index: -1;
-}
-.background-container{
-    position: absolute;
-    overflow-x: hidden;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.background-2{
-    margin-top: 100px;
-    height: 970px;
-    width: 1570px;
-    z-index: -1;
-}
-.bowling-image-container{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    width: 100%;
-}
-.bowling-image-container img{
-    height: 329px;
-    width: 294px;
-}
-.container-images-background{
-    margin-top: 300px;
-}
-@media (max-width: 480px) {
-
+.ambient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-
-@media (min-width: 481px) and (max-width: 768px) {
-
+.glow-sphere {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.25;
+  animation: floatSphere 20s infinite ease-in-out alternate;
 }
 
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
+.glow-cyan {
+  width: 600px;
+  height: 600px;
+  background: #00e5ff;
+  top: -200px;
+  right: -150px;
+  animation-duration: 22s;
 }
 
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-
+.glow-emerald {
+  width: 650px;
+  height: 650px;
+  background: #3b82f6;
+  bottom: -250px;
+  left: -200px;
+  animation-duration: 26s;
 }
 
-
-@media (min-width: 1441px) {
-
+.glow-purple {
+  width: 500px;
+  height: 500px;
+  background: #6366f1;
+  top: 35%;
+  left: 25%;
+  animation-duration: 24s;
+  opacity: 0.15;
 }
+
+.bg-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.6;
+}
+
+@keyframes floatSphere {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, 30px) scale(1.08);
+  }
+  100% {
+    transform: translate(-30px, -40px) scale(0.96);
+  }
+}
+

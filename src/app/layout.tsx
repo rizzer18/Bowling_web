@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Merriweather } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-const RobotoSlabFont = Merriweather({
-  variable: "--font-merriweather",
+
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
+
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Bowlingový Club SV | Týniště nad Orlicí",
   description:
@@ -70,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs">
+    <html lang="cs" className={`${outfit.variable} ${jakarta.variable}`}>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <Script
@@ -101,7 +109,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${RobotoSlabFont.variable} AAAAAA`}>{children}A</body>
+      <body className="app-body">{children}</body>
     </html>
   );
 }
+

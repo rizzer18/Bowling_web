@@ -1,43 +1,53 @@
 .reserve-button {
-    background: linear-gradient( rgba(0, 55, 255, 0.282) 10%, rgba(6, 103, 151, 0.71) 100%);
+  background: var(--primary-gradient);
+  padding: 12px 24px;
+  border-radius: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
-    width: 155px;
-    height: 44px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    gap: 10px;
-    border: none;
+.reserve-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.6s ease;
+}
+
+.reserve-button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.5);
+}
+
+.reserve-button:hover::after {
+  transform: rotate(30deg) translateY(100%);
 }
 
 .button-text {
-    font-size: 18px !important;
-    color: white;
+  font-family: var(--font-heading);
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #070a14 !important;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
-@media (max-width: 480px) {
-    .button-text {
-        font-size: 16px !important;
-        color: white;
-        font-weight: 500;
-    }
-
-    .reserve-button {
-        width: 135px;
-        height: 45px;
-        border-radius: 16px;
-        padding: 10px;
-        border: none;
-    }
-
-    .reserve-button img {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px){
-    
-}

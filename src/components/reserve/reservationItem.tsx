@@ -1,9 +1,25 @@
 import { ReserveButton } from "./reserveButton";
-import "./reservationItem.css"
+import "./reservationItem.css";
 
-export function ReserveItem(props: { txt: string }){
+export function ReserveItem(props: { txt: string }) {
+  return (
+    <div className="reservation-item glass-card">
+      <div className="reservation-item-left">
+        <div className="reservation-icon-badge">⚡</div>
+        <h3 className="reservation-item-title">{props.txt}</h3>
+      </div>
 
-    return(
-        <div className="reservation-item"><h3>{props.txt}</h3> <div className="telefon-or-reserve"><p id="tel">tel:  +420-607-496-833</p> <p id="or">nebo</p> <ReserveButton/></div></div>
-    );
-}
+      <div className="telefon-or-reserve">
+        <a
+          href="tel:+420607496833"
+          className="tel-pill"
+          onClick={(e) => e.stopPropagation()}
+        >
+          📞 +420 607 496 833
+        </a>
+        <span className="or-tag">nebo</span>
+        <ReserveButton />
+      </div>
+    </div>
+  );
+}
