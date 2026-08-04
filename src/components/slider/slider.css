@@ -112,19 +112,20 @@
   max-height: 100%;
   object-fit: contain;
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), var(--shadow-glow-cyan);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
 }
 
 .slider-nav-btn {
-  background: rgba(18, 26, 47, 0.8);
+  background: rgba(18, 26, 47, 0.85);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 229, 255, 0.3);
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
   border-radius: 50%;
   color: #ffffff;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -135,10 +136,10 @@
 }
 
 .slider-nav-btn:hover {
-  background: var(--primary-gradient);
-  color: #070a14;
-  transform: scale(1.1);
-  box-shadow: var(--shadow-glow-cyan);
+  background: rgba(0, 229, 255, 0.2);
+  border-color: var(--primary-cyan);
+  color: var(--primary-cyan);
+  transform: scale(1.08);
 }
 
 /* Thumbnails Strip */
@@ -171,7 +172,7 @@
 .slider-thumb-box.active {
   opacity: 1;
   border-color: var(--primary-cyan);
-  box-shadow: 0 0 12px var(--primary-cyan);
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
   transform: scale(1.05);
 }
 
