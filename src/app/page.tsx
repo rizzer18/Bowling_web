@@ -82,7 +82,7 @@ export default function Home() {
             />
           </a>
 
-          <Menu width={width} />
+          <Menu />
 
           <div className="reservation-info-container">
             <div className="phone-badge">
